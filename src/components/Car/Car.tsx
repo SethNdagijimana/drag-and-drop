@@ -36,6 +36,10 @@ const Car = () => {
     sourceIndex: number,
     targetIndex: number
   ) {
+    if (sourceIndex === 0 && targetIndex === 0) {
+      return
+    }
+
     const nextState = swap(items, sourceIndex, targetIndex)
     setItems(nextState)
   }
